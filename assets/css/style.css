@@ -1,0 +1,136 @@
+/* reset CSS */
+
+body, header, main, section, article, footer, p, img, span, div, form, label, input {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Verdana, Helvetica, sans-serif;
+  margin: auto;
+  width: 80%;
+  min-width: 1024px;
+}
+
+/* bandeau d'en-tête de la page
+   ---------------------------- */
+
+#bandeau {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 30px 50px;
+  color: white;	 
+  background-color: cornflowerblue;
+}
+
+#bandeau form p span {
+  margin-right: 20px;
+}
+
+#bandeau form p label {
+  margin-right: 20px;
+}
+
+#bandeau form p select {
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #fff;
+  font-size: 16px;
+  font-family: Verdana;
+}
+
+/* liste des livres
+   ---------------- */
+
+#listeLivres {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  justify-content: flex-start;
+    width: 100%;
+}
+
+.livre {
+  box-sizing: border-box;
+}
+
+#listeLivres.vignette .livre {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 40px 2%;
+    width: 21%;
+    text-align: center; 
+}
+
+#listeLivres.vignette .livre .titre {
+  margin-bottom: 15px;
+}
+
+#listeLivres.vignette .livre .auteur,
+#listeLivres.vignette .livre .genre {
+    margin: 5px 0;
+}
+
+#listeLivres.vignette .livre .btn_achat {
+  padding: 10px;	
+}
+
+.livre .titre {
+  font-size : 18px;
+  height: 36px;
+}
+
+.livre .imageCouverture img {
+    padding: 5%;
+  width: 25%;
+  border: 1px solid grey;
+}
+
+.livre .prix {
+  color: #ed7b64;
+}
+
+.livre .btn_achat {
+  border: none;
+  color: #fff;
+  background-color: #ed7b64;
+  font-size: 16px;
+}
+
+
+/* pagination de la liste
+   ---------------------- */
+
+#pagination {
+    text-align: center;
+}
+
+#pagination input {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px 15px;
+  border: none;
+  background-color: #ddd;
+}
+
+#pagination input:hover {
+  background-color: #aaa;
+  cursor: pointer;
+}
+#pagination input.btn_page_active {
+  color: #fff;
+  background-color: #333;
+}
+
+/* pied de page
+   ------------ */
+
+footer {
+    text-align: center;
+    margin: 25px;
+    color:grey;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<link rel="stylesheet" href="assets/css/style.css?v=1.0">
+	<title>P42 TP2</title>
+	<script type="module" src="assets/script/catalogue.js"></script>
+</head>
+<body>
+	<header id="bandeau">
+		<form name = "frm">
+			<p>
+				<span>Nombre de livres à afficher :</span>
+				<select id="nbLivres" name="nbLivres">
+					<option value=12> 12 livres / page </option>
+					<option value=24> 24 livres / page </option>
+					<option value=36> 36 livres / page </option>
+					<option value=0 > Tous les livres  </option>
+				</select>
+			</p>
+		</form> 
+	</header>
+	<main>
+		<section id= "listeLivres" class="vignette"></section>
+		<section id= "pagination"></section>
+	</main>
+	<footer>Copyright © 2020 P42</footer>
+	<template id="modeleLivre">
+		<article class="livre">
+			<header class="titre">${titre}</header>
+			<p class="imageCouverture">
+				<img src="assets/images/${imageCouverture}">
+			</p>
+			<p class="auteur">${auteur}</p>
+			<p class="prix">${prix} €</p>
+			<p class="genre">${genre}</p>
+			<input type="button" class="btn_achat" value="Ajouter au panier">
+		</article>
+	</template>
+</body>
+</html>
